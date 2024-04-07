@@ -12,58 +12,58 @@ bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
 
 # Список слов:
 
-word_list = ["яблоко", "банан", ... ]
+<code>word_list = ["яблоко", "банан", ... ]
 
 В этом списке содержатся слова, из которых будет случайным образом выбираться одно для угадывания.
 
 # Настройки игры:
 
-MAX_ATTEMPTS = 6
-MAX_HINTS = 3
-hints_used = 0
-attempts_left = MAX_ATTEMPTS
-secret_word = ""
-guessed_word = ""
+<code>MAX_ATTEMPTS = 6
+<code>MAX_HINTS = 3
+<code>hints_used = 0
+<code>attempts_left = MAX_ATTEMPTS
+<code>secret_word = ""
+<code>guessed_word = ""
 
 Здесь задаются настройки игры: максимальное количество попыток (MAX_ATTEMPTS), максимальное количество подсказок (MAX_HINTS), а также переменные для отслеживания использованных подсказок, оставшихся попыток, загаданного слова и угаданного слова.
 
 # Показ работы команды /start:
 
-@bot.message_handler(commands=['start'])
-def start_message(message):
-    global attempts_left
-    global hints_used
-    global secret_word
-    global guessed_word
+<code>@bot.message_handler(commands=['start'])
+<code>def start_message(message):
+    <code>global attempts_left
+    <code>global hints_used
+    <code>global secret_word
+    <code>global guessed_word
     ...
 
 Эта функция вызывается, когда пользователь отправляет команду /start. Она сбрасывает значения переменных, инициализирует загаданное слово и угаданное слово, а затем отправляет приветственное сообщение и инструкцию о том, как играть.
 
 # Показ работы команды /hint:
 
-@bot.message_handler(commands=['hint'])
-def send_hint(message):
-    global secret_word
-    global guessed_word
-    global hints_used
+<code>@bot.message_handler(commands=['hint'])
+<code>def send_hint(message):
+    <code>global secret_word
+    <code>global guessed_word
+    <code>global hints_used
     ...
 
 Эта функция вызывается, когда пользователь отправляет команду /hint. Она проверяет количество использованных подсказок и отправляет подсказку (если есть неугаданные буквы в слове).
 
 # Обработчик текстовых сообщений:
 
-@bot.message_handler(content_types=['text'])
-def check_letter(message):
-    global guessed_word
-    global secret_word
-    global attempts_left
+<code>@bot.message_handler(content_types=['text'])
+<code>def check_letter(message):
+   <code>global guessed_word
+    <code>global secret_word
+    <code>global attempts_left
     ...
 
 Эта функция вызывается, когда пользователь отправляет текстовое сообщение. Она проверяет содержимое сообщения (должна быть одна буква) и проверяет, есть ли эта буква в загаданном слове. Затем она обновляет угаданное слово и отправляет результат пользователю.
 
 # Запуск бота:
 
-bot.polling()
+<code>bot.polling()
 
 Этот метод начинает прослушивание сообщений от Telegram и вызывает соответствующие обработчики для обработки команд и сообщений пользователей.
 
