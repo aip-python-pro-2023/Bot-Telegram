@@ -1,7 +1,7 @@
 import telebot
 import random
 
-bot = telebot.TeleBot('6427559678:AAHSDsb75G4J0VOPRQGue-x4jYZAV11uuqY')
+bot = telebot.TeleBot('7132950816:AAHC3u4NBwtquEPDDB9-zhYkMGT1T5hs4Ic')
 
 word_list = ["яблоко", "банан", "апельсин", "виноград", "ананас", "клубника", "киви", "арбуз", "персик", "манго",
              "вишня", "голубика", "абрикос", "груша", "слива", "лимон", "лайм", "кокос", "гранат", "инжир",
