@@ -2,7 +2,7 @@
 
 # Импорт библиотек и установка токена бота:
 
-import telebot
+ <code>import telebot
 import random
 
 bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
