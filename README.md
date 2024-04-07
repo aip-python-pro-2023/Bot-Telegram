@@ -5,7 +5,7 @@
 <code>
 import telebot
 import random
-
+<code>
 bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
 
 Этот блок кода импортирует необходимые библиотеки для работы нашего Telegram Бота
