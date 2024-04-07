@@ -2,8 +2,7 @@
 
 # Импорт библиотек и установка токена бота:
 
-<code>
-import telebot
+<code> import telebot
 import random
 
 bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
@@ -31,42 +30,42 @@ guessed_word = ""</code>
 
 # Показ работы команды /start:
 
-@bot.message_handler(commands=['start'])
+<code>@bot.message_handler(commands=['start'])
 def start_message(message):
     global attempts_left
     global hints_used
     global secret_word
-    global guessed_word
-    ...
+    global guessed_word 
+    ...</code>
 
 
 Эта функция вызывается, когда пользователь отправляет команду /start. Она сбрасывает значения переменных, инициализирует загаданное слово и угаданное слово, а затем отправляет приветственное сообщение и инструкцию о том, как играть.
 
 # Показ работы команды /hint:
 
-@bot.message_handler(commands=['hint'])
+<code>@bot.message_handler(commands=['hint'])
 def send_hint(message):
     global secret_word
     global guessed_word
     global hints_used
-    ...
+    ...</code>
 
 Эта функция вызывается, когда пользователь отправляет команду /hint. Она проверяет количество использованных подсказок и отправляет подсказку (если есть неугаданные буквы в слове).
 
 # Обработчик текстовых сообщений:
 
-@bot.message_handler(content_types=['text'])
+<code>@bot.message_handler(content_types=['text'])
 def check_letter(message):
     global guessed_word
     global secret_word
     global attempts_left
-    ...
+    ...</code>
  
 Эта функция вызывается, когда пользователь отправляет текстовое сообщение. Она проверяет содержимое сообщения (должна быть одна буква) и проверяет, есть ли эта буква в загаданном слове. Затем она обновляет угаданное слово и отправляет результат пользователю.
 
 # Запуск бота:
 
-bot.polling()
+<code>bot.polling()</code>
 
 Этот метод начинает прослушивание сообщений от Telegram и вызывает соответствующие обработчики для обработки команд и сообщений пользователей.
 
