@@ -36,8 +36,8 @@ def start_message(message):
     secret_word = random.choice(word_list)
     guessed_word = "_" * len(secret_word)
 
-    word_length = len(secret_word)  # Получаем длину загаданного слова
-    word_with_spaces = " ".join(guessed_word)  # Добавляем пробелы между подчеркиваниями
+    word_length = len(secret_word)
+    word_with_spaces = " ".join(guessed_word)
 
     bot.send_message(message.chat.id, "Привет! 😊")
     bot.send_message(message.chat.id,
