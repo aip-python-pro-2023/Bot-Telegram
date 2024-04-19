@@ -1,8 +1,8 @@
 # Bot-Telegram Виселица
 
-# Импорт библиотеки и установка токена бота:
-
 Telegram Bot - @visilechagamesbot
+
+# Импорт библиотеки и установка токена бота:
 
 <code> import telebot
 import random
