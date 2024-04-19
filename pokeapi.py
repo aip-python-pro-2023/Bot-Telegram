@@ -11,8 +11,8 @@ class PokeAPI:
             data = response.json()
             pokemon_id = data['id']
             name = data['name']
-            height = data['height'] / 10  # в метрах
-            weight = data['weight'] / 10  # в килограммах
+            height = data['height'] / 10  
+            weight = data['weight'] / 10  
             return Pokemon(id=pokemon_id, name=name, height=height, weight=weight)
         else:
             raise Exception(f"Failed to get Pokemon with name or ID '{name_or_id}'")
