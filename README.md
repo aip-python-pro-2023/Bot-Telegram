@@ -2,6 +2,8 @@
 
 # Импорт библиотеки и установка токена бота:
 
+Telegram Bot - @visilechagamesbot
+
 <code> import telebot
 import random
 
