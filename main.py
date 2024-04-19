@@ -1,10 +1,10 @@
 from pokeapi import PokeAPI
 
-# Получение покемона с именем "ditto"
+
 ditto = PokeAPI.get_pokemon("ditto")
 print(ditto)
 
-# Получение первых 50 покемонов
+
 pokemon_generator = PokeAPI.get_all(get_full=True)
 heaviest_pokemon = None
 heaviest_weight = 0.0
